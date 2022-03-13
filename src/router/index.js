@@ -13,9 +13,10 @@ const routes = [
     component: EventList
   },
   {
-    path: "/event-us",
+    path: "/event/:id",
     name: "event-show",
     component: EventShow,
+    props: true,
     alias: "/event"
     //* alias - kalau kita nulis path sesuai alias dia kan tetap esekusi path utamanya walaupun berbeda
   },
@@ -25,9 +26,8 @@ const routes = [
     //* redirect - kalau kita nulis path dia kan langsung mengganti ke path yang rujukannya
   },
   {
-    path: "/event/:name",
+    path: "/event/create",
     name: "event-create",
-    props: true,
     //* cara mudah untuk mendapatkan nilai dari $route.params dengan menambahkan props:true
     component: EventCreate
   }

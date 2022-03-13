@@ -1,13 +1,11 @@
 <template>
   <div>
-    <h1>{{ name }} Event</h1>
+    <h1>Event Create</h1>
   </div>
 </template>
 
 <script>
-export default {
-  props: ["name"],
-};
+export default {};
 </script>
 
 <style lang="scss" scoped></style>
