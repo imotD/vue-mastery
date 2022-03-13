@@ -1,11 +1,13 @@
 <template>
   <div>
-    <h1>Creatae Event</h1>
+    <h1>{{ name }} Event</h1>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["name"],
+};
 </script>
 
 <style lang="scss" scoped></style>
