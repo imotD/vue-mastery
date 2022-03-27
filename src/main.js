@@ -4,6 +4,8 @@ import router from "./router";
 import BaseIcon from "@/components/BaseIcon";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 Vue.component("BaseIcon", BaseIcon);
 
@@ -39,7 +41,7 @@ requireComponent.keys().forEach(fileName => {
 });
 
 Vue.config.productionTip = false;
-
+Vue.use(VueAxios, axios)
 new Vue({
   router,
   render: h => h(App)
