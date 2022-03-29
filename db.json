@@ -231,6 +231,42 @@
       "date": "",
       "time": "5:00",
       "attendees": []
+    },
+    {
+      "id": 6908691,
+      "user": {
+        "id": "1234abcd",
+        "name": "Tommy Alhamra"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "1234abcd",
+        "name": "Tommy Alhamra"
+      },
+      "title": "Best Frontend Developer",
+      "description": "become to the best in the worl frontend developer",
+      "location": "Jakarta",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 1991663,
+      "user": {
+        "id": "1234abcd",
+        "name": "Tommy Alhamra"
+      },
+      "category": "communitiy",
+      "organizer": {
+        "id": "1234abcd",
+        "name": "Tommy Alhamra"
+      },
+      "title": "PandegangJs",
+      "description": "Community JS",
+      "location": "Moca Coffe",
+      "date": "2022-04-07T23:21:00.000Z",
+      "time": "17:00",
+      "attendees": []
     }
   ]
 }

@@ -10,33 +10,33 @@ const routes = [
   {
     path: "/",
     name: "event-list",
-    component: EventList
+    component: EventList,
   },
   {
     path: "/event/:id",
     name: "event-show",
     component: EventShow,
     props: true,
-    alias: "/event"
+    alias: "/event",
     //* alias - kalau kita nulis path sesuai alias dia kan tetap esekusi path utamanya walaupun berbeda
   },
-  {
-    path: "/event",
-    redirect: { name: "event-show" }
-    //* redirect - kalau kita nulis path dia kan langsung mengganti ke path yang rujukannya
-  },
+  // {
+  //   path: "/event",
+  //   redirect: { name: "event-show" }
+  //   //* redirect - kalau kita nulis path dia kan langsung mengganti ke path yang rujukannya
+  // },
   {
     path: "/event/create",
     name: "event-create",
     //* cara mudah untuk mendapatkan nilai dari $route.params dengan menambahkan props:true
-    component: EventCreate
-  }
+    component: EventCreate,
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;
