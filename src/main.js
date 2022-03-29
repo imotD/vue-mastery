@@ -4,8 +4,10 @@ import router from "./router";
 import BaseIcon from "@/components/BaseIcon";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
-import axios from 'axios'
-import VueAxios from 'vue-axios'
+import axios from "axios";
+import VueAxios from "vue-axios";
+import Vuex from "vuex";
+import store from "./store/store";
 
 Vue.component("BaseIcon", BaseIcon);
 
@@ -18,7 +20,7 @@ const requireComponent = require.context(
   /Base[A-Z]\w+\.(vue|js)$/
 );
 
-requireComponent.keys().forEach(fileName => {
+requireComponent.keys().forEach((fileName) => {
   // Get component config
   const componentConfig = requireComponent(fileName);
 
@@ -26,7 +28,10 @@ requireComponent.keys().forEach(fileName => {
   const componentName = upperFirst(
     camelCase(
       // Gets the file name regardless of folder depth
-      fileName.split("/").pop().replace(/\.\w+$/, "")
+      fileName
+        .split("/")
+        .pop()
+        .replace(/\.\w+$/, "")
     )
   );
 
@@ -41,8 +46,9 @@ requireComponent.keys().forEach(fileName => {
 });
 
 Vue.config.productionTip = false;
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios, axios, Vuex);
 new Vue({
   router,
-  render: h => h(App)
+  store,
+  render: (h) => h(App),
 }).$mount("#app");
